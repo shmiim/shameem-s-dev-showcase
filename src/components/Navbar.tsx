@@ -35,7 +35,7 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
-        <a href="#" className="font-sora font-bold text-lg text-foreground cursor-none">
+        <a href="#" className="font-sora font-bold text-lg text-foreground">
           <span className="text-primary">S</span>hameem
         </a>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors cursor-none ${
+              className={`text-sm font-medium transition-colors ${
                 active === link.href.replace("#", "")
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground cursor-none"
+          className="md:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -77,7 +77,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors cursor-none"
+              className="block py-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {link.label}
             </a>

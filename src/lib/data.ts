@@ -6,14 +6,13 @@ export const personalInfo = {
   location: "Kerala, India",
   linkedin: "https://linkedin.com/in/muhammed-shameem-k-a799a7295",
   github: "https://github.com/shmiim",
-  bio: "MERN Stack Developer with hands-on experience building scalable full-stack web applications using JavaScript (ES6+) and TypeScript. Passionate about performance, usability, and clean UI.",
+  bio: "I’m Muhammed Shameem K, a passionate Full-Stack Developer focused on building modern web applications with clean UI and practical functionality. I work with technologies like React.js, Next.js, Node.js, MongoDB, JavaScript, and TypeScript. I enjoy creating responsive interfaces, solving real problems, and continuously improving my skills through hands-on projects. As a fresher, I bring strong learning ability, consistency, and a genuine interest in building products that create value.",
 };
 
 export const typingRoles = [
+  "Full-Stack Developer",
   "MERN Stack Developer",
-  "React & Next.js Engineer",
-  "UI/UX & QA Researcher",
-  "WhatsApp Automation Builder",
+  "React & Next.js Developer",
 ];
 
 export const stats = [
@@ -106,6 +105,8 @@ export const projects = [
     name: "NexCart",
     description: "Feature-rich e-commerce app with Redux cart, checkout flow, and product filtering.",
     tech: ["React.js", "Redux", "JavaScript"],
+    link: "https://next-cart-ecommerce.vercel.app",
+    image: "/nexcart.png",
   },
   {
     name: "Teacher Companion",

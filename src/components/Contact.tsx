@@ -41,7 +41,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-              className="flex items-center gap-4 glass rounded-xl p-4 card-shadow hover:card-shadow-hover transition-all cursor-none justify-center"
+              className="flex items-center gap-4 glass rounded-xl p-4 card-shadow hover:card-shadow-hover transition-all justify-center"
             >
               <span className="text-primary">{link.icon}</span>
               <span className="text-foreground font-medium text-sm md:text-base">{link.label}</span>
@@ -54,7 +54,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity cursor-none card-shadow-hover"
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity card-shadow-hover"
         >
           <Send size={16} />
           Let's Connect

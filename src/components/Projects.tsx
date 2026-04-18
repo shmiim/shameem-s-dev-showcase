@@ -70,13 +70,23 @@ const Projects = () => {
             >
               <TiltCard
                 isWhatsApp={project.isWhatsApp}
-                className={`glass rounded-xl overflow-hidden gradient-border h-full ${
+                className={`flex flex-col glass rounded-xl overflow-hidden gradient-border h-full ${
                   project.isWhatsApp ? "border-l-2" : ""
                 }`}
                 // @ts-ignore style prop for border color
               >
+                {/* @ts-ignore */}
+                {(project as any).image && (
+                  <div className="w-full shrink-0 h-48 sm:h-52 overflow-hidden relative bg-secondary/30 mt-px border-b border-white/5">
+                    <img 
+                      src={(project as any).image} 
+                      alt={project.name}
+                      className="absolute left-0 w-full object-cover object-top h-[125%] -top-[12%]"
+                    />
+                  </div>
+                )}
                 <div
-                  className="p-6 flex flex-col h-full"
+                  className="p-6 flex flex-col flex-1"
                   style={project.isWhatsApp ? { borderLeft: "2px solid hsl(142, 70%, 49%)" } : {}}
                 >
                   <div className="flex items-center gap-2 mb-3">
@@ -103,15 +113,34 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={personalInfo.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline cursor-none"
-                  >
-                    <ExternalLink size={14} />
-                    GitHub
-                  </a>
+                  <div className="flex items-center gap-4">
+                    {/* @ts-ignore adding optional typing inline */}
+                    {(project as any).link && (
+                      <a
+                        href={(project as any).link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
+                      >
+                        <ExternalLink size={14} />
+                        Live Demo
+                      </a>
+                    )}
+                    <a
+                      href={personalInfo.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-1.5 text-sm transition-colors ${
+                        // @ts-ignore
+                        (project as any).link
+                          ? "text-muted-foreground hover:text-primary"
+                          : "text-primary hover:underline"
+                      }`}
+                    >
+                      <ExternalLink size={14} />
+                      GitHub
+                    </a>
+                  </div>
                 </div>
               </TiltCard>
             </motion.div>

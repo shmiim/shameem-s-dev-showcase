@@ -70,7 +70,7 @@ const Skills = () => {
                       duration: 0.3,
                       delay: catIdx * 0.1 + skillIdx * 0.03,
                     }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg glass-light text-sm font-medium text-foreground hover:text-primary transition-colors cursor-none"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg glass-light text-sm font-medium text-foreground hover:text-primary transition-colors"
                   >
                     <span className="text-primary">{iconMap[skill]}</span>
                     {skill}
