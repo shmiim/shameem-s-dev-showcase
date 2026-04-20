@@ -108,7 +108,8 @@ const Hero = () => {
               View Projects
             </a>
             <a
-              href="#"
+              href="/MUHAMMED SHAMEEM K.pdf"
+              download="Muhammed_Shameem_K_Resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/40 text-primary font-semibold text-sm hover:bg-primary/10 transition-colors backdrop-blur-md bg-background/10"
             >
               <Download size={16} />
