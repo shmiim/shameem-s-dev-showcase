@@ -41,6 +41,14 @@ const TiltCard = ({
   );
 };
 
+const badgeStyles: Record<string, string> = {
+  Featured: "bg-primary/20 text-primary border border-primary/40",
+  Freelance: "bg-amber-500/20 text-amber-400 border border-amber-500/30",
+  Product: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
+};
+const getBadgeStyle = (badge: string) =>
+  badgeStyles[badge] ?? "bg-teal-500/20 text-teal-400 border border-teal-500/30";
+
 const Projects = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -69,11 +77,14 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
             >
               <TiltCard
-                isWhatsApp={project.isWhatsApp}
+                isWhatsApp={(project as any).isWhatsApp}
                 className={`flex flex-col glass rounded-xl overflow-hidden gradient-border h-full ${
-                  project.isWhatsApp ? "border-l-2" : ""
+                  (project as any).isWhatsApp ? "border-l-2" : ""
+                } ${
+                  (project as any).featured
+                    ? "ring-1 ring-primary/30 shadow-[0_0_24px_4px_rgba(56,189,248,0.12)]"
+                    : ""
                 }`}
-                // @ts-ignore style prop for border color
               >
                 {/* @ts-ignore */}
                 {(project as any).image && (
@@ -87,18 +98,13 @@ const Projects = () => {
                 )}
                 <div
                   className="p-6 flex flex-col flex-1"
-                  style={project.isWhatsApp ? { borderLeft: "2px solid hsl(142, 70%, 49%)" } : {}}
+                  style={(project as any).isWhatsApp ? { borderLeft: "2px solid hsl(142, 70%, 49%)" } : {}}
                 >
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
                     <h3 className="font-sora font-bold text-foreground">{project.name}</h3>
                     {project.badge && (
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-teal-500/20 text-teal-400 border border-teal-500/30">
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${getBadgeStyle(project.badge)}`}>
                         {project.badge}
-                      </span>
-                    )}
-                    {project.featured && (
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-primary/20 text-primary border border-primary/30">
-                        Featured
                       </span>
                     )}
                   </div>
@@ -113,8 +119,7 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center gap-4">
-                    {/* @ts-ignore adding optional typing inline */}
+                  <div className="flex items-center gap-4 flex-wrap">
                     {(project as any).link && (
                       <a
                         href={(project as any).link}
@@ -127,11 +132,10 @@ const Projects = () => {
                       </a>
                     )}
                     <a
-                      href={personalInfo.github}
+                      href={(project as any).github ?? personalInfo.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`inline-flex items-center gap-1.5 text-sm transition-colors ${
-                        // @ts-ignore
                         (project as any).link
                           ? "text-muted-foreground hover:text-primary"
                           : "text-primary hover:underline"

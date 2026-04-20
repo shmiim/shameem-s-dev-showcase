@@ -16,8 +16,8 @@ export const typingRoles = [
 ];
 
 export const stats = [
-  { label: "Projects Built", value: 5 },
-  { label: "Companies", value: 3 },
+  { label: "Projects Built", value: 4 },
+  { label: "Companies", value: 1 },
   { label: "Chatbot System", value: 1 },
 ];
 
@@ -51,28 +51,17 @@ export const skillCategories = [
 
 export const experiences = [
   {
-    company: "FitMyJob",
-    role: "UI Developer Intern / QA & UX Researcher",
+    company: "FitMyJob (Tecron Product)",
+    role: "UI Developer Intern / Product & QA Engineer",
     duration: "Present",
-    points: [
-      "Conducted UX research and QA testing, reporting critical issues across the platform",
-      "Found and fixed a production-level API misconfiguration improving system reliability",
-      "Built responsive UI components using React.js, TypeScript, and Tailwind CSS",
-      "Designed WhatsApp & Instagram automation dashboard UI",
-    ],
-  },
-  {
-    company: "Tecron",
-    role: "WhatsApp Chatbot Flow Builder",
-    duration: "Recent",
     badge: "Automation",
     isWhatsApp: true,
     points: [
-      "Architected end-to-end WhatsApp chatbot conversation flows for automated user interactions",
-      "Designed multi-step branching logic covering greetings, FAQs, lead capture, and escalation to human agents",
-      "Mapped out message nodes, quick-reply buttons, and conditional flow triggers using WhatsApp Business API patterns",
-      "Collaborated on webhook integration design to connect chatbot responses with backend services",
-      "Produced detailed flow diagrams and documentation for developer handoff",
+      "Worked on Tecron, an Instagram & WhatsApp automation tool built under FitMyJob",
+      "Designed and developed chatbot flows and automation dashboards",
+      "Conducted QA testing and identified production-level issues",
+      "Built UI components using React.js, TypeScript, and Tailwind CSS",
+      "Contributed to product improvements and user experience optimization",
     ],
   },
   {
@@ -89,17 +78,33 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "Tecron WhatsApp Chatbot",
-    description: "Designed and built a complete WhatsApp chatbot flow system with branching conversation logic, quick-reply buttons, lead capture, and human agent escalation.",
-    tech: ["WhatsApp Business API", "Flow Design", "Webhook", "Node.js"],
-    badge: "Flow Architecture",
+    name: "Tecron Automation Platform",
+    description: "A WhatsApp & Instagram automation tool designed for business growth, including chatbot flows, lead capture, and automated responses.",
+    tech: ["React.js", "Node.js", "WhatsApp Business API", "Webhooks"],
+    badge: "Featured",
     isWhatsApp: true,
     featured: true,
+    image: "/tecron.png",
+    link: "https://chatflow-fmj98.lovable.app",
+    github: "https://github.com/shmiim/shameem-s-dev-showcase.git",
   },
   {
-    name: "RuralCare",
-    description: "Full-stack healthcare appointment booking system with REST APIs and role-based access.",
-    tech: ["Next.js", "TypeScript", "MongoDB"],
+    name: "Stories from Bengaluru",
+    description: "A client project built as a city-based platform for rooms, jobs, PG, and local services in Bengaluru.",
+    tech: ["React.js", "Next.js", "Tailwind CSS"],
+    badge: "Freelance",
+    image: "/bengaluru.png",
+    link: "https://benglore-11.vercel.app",
+    github: "https://github.com/shmiim",
+  },
+  {
+    name: "FitMyJob Platform",
+    description: "AI-powered job platform focusing on resume analysis, job matching, and automation tools. Performed UX audit and QA testing, identified critical API and production bugs, and improved user flow and platform reliability.",
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "Node.js"],
+    badge: "Product",
+    image: "/fitmyjob.png",
+    link: "https://fitmyjob.com",
+    github: "https://github.com/shmiim",
   },
   {
     name: "NexCart",
@@ -107,16 +112,6 @@ export const projects = [
     tech: ["React.js", "Redux", "JavaScript"],
     link: "https://next-cart-ecommerce.vercel.app",
     image: "/nexcart.png",
-  },
-  {
-    name: "Teacher Companion",
-    description: "Academic CRUD management system for teachers to track student records.",
-    tech: ["PHP", "MySQL"],
-  },
-  {
-    name: "Recipe Web App",
-    description: "API-powered recipe discovery app with search and responsive design.",
-    tech: ["React.js", "REST API"],
   },
 ];
 
