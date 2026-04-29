@@ -1,98 +1,111 @@
 import { motion } from "framer-motion";
-import { Code2, Bot, AppWindow, Search, ArrowRight } from "lucide-react";
+import { Code2, Sparkles, LayoutDashboard, ShieldCheck, Rocket, Network, ArrowRight } from "lucide-react";
 
 const services = [
   {
-    title: "Full-Stack Web Development",
-    description: "End-to-end MERN apps — React frontends, Node/Express APIs, MongoDB databases. From MVP to production-ready.",
+    title: "Full Stack Development",
+    description: "End-to-end MERN applications from MVP to production-ready architecture.",
     icon: Code2,
+    color: "#2A9FD6"
   },
   {
-    title: "AI-Powered Feature Integration",
-    description: "Integrating LLMs, prompt engineering, and AI workflows into your product. Experience with Anthropic API and conversational UIs.",
-    icon: Bot,
+    title: "AI Automation",
+    description: "Integrating intelligent LLMs, prompt engineering, and conversational AI workflows.",
+    icon: Sparkles,
+    color: "#2A9FD6"
   },
   {
-    title: "SaaS Product Development",
-    description: "Building scalable SaaS products with auth, dashboards, billing-ready architecture — fast and clean.",
-    icon: AppWindow,
+    title: "SaaS Product Build",
+    description: "Complete scalable SaaS products with auth, dashboard interfaces, and billing architecture.",
+    icon: LayoutDashboard,
+    color: "#2A9FD6"
   },
   {
     title: "UX Audit & QA",
-    description: "In-depth UX reviews, bug reports, and competitor benchmarking to sharpen your product's edge.",
-    icon: Search,
+    description: "In-depth UX reviews, bug tracking, and detailed competitor benchmarking.",
+    icon: ShieldCheck,
+    color: "#2A9FD6"
+  },
+  {
+    title: "Landing Pages",
+    description: "High-converting, premium animated landing pages with Framer Motion and modern UI.",
+    icon: Rocket,
+    color: "#2A9FD6"
+  },
+  {
+    title: "API Integration",
+    description: "Seamless third-party webhook integrations, payment gateways, and data syncing.",
+    icon: Network,
+    color: "#2A9FD6"
   }
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="relative bg-[#0a0a0a] section-padding overflow-hidden">
-      {/* Animated Background Blob */}
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2A9FD6]/10 rounded-full blur-[120px] pointer-events-none"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
+    <section id="services" className="bg-[#050505] py-24 relative overflow-hidden">
+      {/* Subtle Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2A9FD6]/5 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 relative z-10">
+        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-white text-3xl font-bold font-sora mb-4">
-            What I Bring to the Table
+          <h2 className="text-3xl md:text-4xl font-bold font-sora mb-4 text-white">
+            Services I Offer
           </h2>
-          <div className="w-20 h-1 bg-[#2A9FD6] mx-auto rounded-full" />
+          <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+            Clean, scalable, and business-focused digital solutions.
+          </p>
+          <div className="w-16 h-1 bg-[#2A9FD6] rounded-full mx-auto" />
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Simple Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="glass p-8 rounded-2xl relative group overflow-hidden border border-white/5 hover:border-[#2A9FD6]/50 transition-all duration-300 card-shadow hover:shadow-[0_8px_32px_rgba(42,159,214,0.2)]"
+              className="group glass p-8 rounded-2xl border border-white/5 bg-[#0a0a0a] hover:border-[#2A9FD6]/30 transition-all duration-300"
             >
-              {/* Subtle top glow */}
-              <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#2A9FD6]/0 to-transparent group-hover:via-[#2A9FD6]/50 transition-all duration-500" />
-              
-              <div className="flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-[#2A9FD6]/10 flex items-center justify-center mb-6 text-[#2A9FD6] group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-6 h-6" />
+              <div className="flex items-start gap-6">
+                
+                {/* Glowing Icon Container (only animate icon on hover) */}
+                <div className="w-12 h-12 shrink-0 rounded-xl bg-[#2A9FD6]/10 flex items-center justify-center border border-white/5 transition-colors duration-300 group-hover:bg-[#2A9FD6]/20">
+                  <service.icon className="w-6 h-6 text-[#2A9FD6] transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(42,159,214,0.8)]" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3 font-sora">
-                  {service.title}
-                </h3>
-                
-                <p className="text-muted-foreground mb-8 flex-grow line-clamp-3">
-                  {service.description}
-                </p>
-                
-                <div className="mt-auto">
-                  <span className="inline-flex items-center text-sm font-medium text-[#2A9FD6] group-hover:text-white transition-colors duration-300">
-                    Let's build <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                <div className="flex flex-col">
+                  <h3 className="text-xl font-bold text-white mb-2 font-sora">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+                  
+                  {/* CTA */}
+                  <a 
+                    href="#contact" 
+                    className="inline-flex items-center text-sm font-semibold text-[#2A9FD6] transition-colors duration-300 group-hover:text-white"
+                  >
+                    Let's Build 
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </a>
                 </div>
+                
               </div>
             </motion.div>
           ))}
         </div>
+        
       </div>
     </section>
   );

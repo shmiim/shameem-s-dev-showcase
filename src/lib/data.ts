@@ -53,8 +53,10 @@ export const experiences = [
   {
     company: "FitMyJob (Tecron Product)",
     role: "UI Developer Intern / Product & QA Engineer",
+    type: "Internship",
     duration: "Present",
     badge: "Automation",
+    logo: "/Fit-My-Job-logo-1.jpg",
     isWhatsApp: true,
     points: [
       "Worked on Tecron, an Instagram & WhatsApp automation tool built under FitMyJob",
@@ -63,16 +65,20 @@ export const experiences = [
       "Built UI components using React.js, TypeScript, and Tailwind CSS",
       "Contributed to product improvements and user experience optimization",
     ],
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "Node.js"]
   },
   {
     company: "Softronics",
     role: "React Developer Intern",
+    type: "Internship",
     duration: "1 Month, 2025",
+    logo: "/Softroniics-logo.png",
     points: [
       "Built React applications using JavaScript & TypeScript",
       "Improved responsive UI with Tailwind CSS",
       "Optimized component performance and debugging",
     ],
+    tech: ["React.js", "JavaScript", "TypeScript", "Tailwind CSS"]
   },
 ];
 
@@ -80,26 +86,44 @@ export const projects = [
   {
     name: "Tecron Automation Platform",
     description: "A WhatsApp & Instagram automation tool designed for business growth, including chatbot flows, lead capture, and automated responses.",
+    impact: [
+      "Built responsive UI and interactive dashboard",
+      "Integrated complex backend/API flows and webhooks",
+      "Designed intelligent chatbot conversation flows",
+      "Delivered a client-ready, scalable product"
+    ],
     tech: ["React.js", "Node.js", "WhatsApp Business API", "Webhooks"],
     badge: "Featured",
     isWhatsApp: true,
     featured: true,
-    image: "/tecron.png",
+    image: "/tecronchatbot.png",
     link: "https://chatflow-fmj98.lovable.app",
     github: "https://github.com/shmiim/shameem-s-dev-showcase.git",
   },
   {
     name: "Stories from Bengaluru",
     description: "A client project built as a city-based platform for rooms, jobs, PG, and local services in Bengaluru.",
+    impact: [
+      "Built responsive and performant Next.js UI",
+      "Implemented seamless multi-category filtering",
+      "Improved overall user experience for city residents",
+      "Delivered client-ready, production-grade design"
+    ],
     tech: ["React.js", "Next.js", "Tailwind CSS"],
     badge: "Freelance",
-    image: "/bengaluru.png",
+    image: "/storiesofbenglore.png",
     link: "https://benglore-11.vercel.app",
     github: "https://github.com/shmiim",
   },
   {
     name: "FitMyJob Platform",
-    description: "AI-powered job platform focusing on resume analysis, job matching, and automation tools. Performed UX audit and QA testing, identified critical API and production bugs, and improved user flow and platform reliability.",
+    description: "AI-powered job platform focusing on resume analysis, job matching, and automation tools.",
+    impact: [
+      "Performed comprehensive UX audit and QA testing",
+      "Tested and fixed critical production issues",
+      "Identified and resolved API integration bugs",
+      "Improved user flow and platform reliability"
+    ],
     tech: ["React.js", "TypeScript", "Tailwind CSS", "Node.js"],
     badge: "Product",
     image: "/fitmyjob.png",
@@ -109,7 +133,14 @@ export const projects = [
   {
     name: "NexCart",
     description: "Feature-rich e-commerce app with Redux cart, checkout flow, and product filtering.",
+    impact: [
+      "Built complete cart functionality with Redux",
+      "Implemented a seamless checkout user flow",
+      "Developed complex product filtering logic",
+      "Ensured responsive design across all devices"
+    ],
     tech: ["React.js", "Redux", "JavaScript"],
+    badge: "E-commerce",
     link: "https://next-cart-ecommerce.vercel.app",
     image: "/nexcart.png",
   },
